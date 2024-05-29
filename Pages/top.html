@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inhouse English</title>
+    <title>My Page Title</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon3.ico" />
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="../CSS/top.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="C_StudentTopMenu p-0 C_StudentSelectCls container-fluid">
+      <div class="w-skill-top-bg d-flex flex-row justify-content-between">
+        <div class="d-flex align-items-center">
+          <div class="pl-3 backme">
+            <a class="nav-link btnLogout">
+              <!-- <i data-test="fa" class="fas fa-arrow-circle-left text-dark"></i> -->
+              <svg
+                class="text-dark"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="choose_info">Class: 11</div>
+        <div class="d-flex align-items-center">
+          <div class="login-profile-info">
+            <div class="header-btn-lg pr-0">
+              <div class="widget-content p-0">
+                <div class="widget-content-wrapper">
+                  <div class="widget-content-left">
+                    <div class="btn-group" onclick="hide_show()">
+                      <a
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        class="p-0 btn"
+                        ><img
+                          class="rounded-circle"
+                          src="../Images/top/top.png"
+                          alt=""
+                        />
+                        <!-- <i class="fa fa-angle-down ml-2 opacity-8"></i> -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 448 512"
+                          style="height: 19px; width: 19px; font-weight: 900"
+                        >
+                          <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                          <path
+                            d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="logprofile" style="display: none">
+            <ul class="list-group list-group-horizontal">
+              <!-- <li class="list-group-item"></li> -->
+              <li class="list-group-item d-flex flex-column">
+                <!-- <a class="nav-link btnLogout"
+                  ><i data-test="fa" class="fas fa-user-edit"></i
+                  >&nbsp;Profile</a
+                > -->
+                <a class="nav-link btnLogout">
+                  <!-- <i data-test="fa" class="fa fa-sign-out-alt"></i> -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    style="height: 20px; width: 20px"
+                  >
+                    <path
+                      d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"
+                    />
+                  </svg>
+                  &nbsp;Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let x = document.querySelector(".logprofile");
+      let hide_show = () => {
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

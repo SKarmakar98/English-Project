@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        overflow: clip;
+        border-radius: 20px;
+
+        margin-right: auto;
+        margin-left: auto;
+        border: 3px solid #7f5af0;
+        width: 90%;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+
+        background-color: rgba(44, 182, 125, 0.8);
+        height: 100px;
+      }
+
+      /* setup (visual) */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 2rem;
+        min-height: 5000px;
+        font-family: sans-serif;
+        font-weight: normal;
+        line-height: 1.5;
+        color: #94a1b2;
+        background-color: #16161a;
+      }
+
+      main {
+        padding: 1rem 5rem 5rem;
+        font-size: 2em;
+        background-color: #242629;
+      }
+
+      h1 {
+        padding-top: 0.8em;
+        font-weight: normal;
+        text-align: center;
+        color: #fffffe;
+      }
+
+      p:not(:last-of-type),
+      ul {
+        margin-bottom: 1em;
+      }
+
+      ul {
+        margin-left: 1em;
+      }
+
+      ::marker,
+      code,
+      a {
+        color: #7f5af0;
+      }
+
+      code {
+        border-radius: 0.2em;
+        padding: 0.1em 0.2em;
+        background-color: #16161a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Sticky Header</h1>
+      </header>
+      <main>
+        <p>
+          I don't know exactly what to call this design layout. Is there a name
+          for it? "Frame layout", "page within page layout" or "centered page
+          layout"... It's definitely not new in web design, but there are some
+          strange things happening here that I can't explain.<br />My guess is
+          that there are some browser rendering issues going on because of the
+          relatively new CSS properties. I'm aware that I could use some
+          JavaScript to make everything work as aspected, but I want to achieve
+          this design with <strong>CSS only</strong>.
+        </p>
+        <p>
+          Because of the wrapper's border-radius, I needed a solution to "hide"
+          the overlapping edges of the element boxes. AFAIK,
+          <code>overflow: hidden</code> doesn't work with
+          <code>position: sticky</code>. I came across
+          <code>overflow: clip</code> which achieves (nearly) the same result as
+          hidden but keeps the sticky functionality.
+        </p>
+        <p>
+          Unfortunately, I'm encountering some problems across browsers with
+          just this minimal setup (tested in the latest versions of Chrome,
+          Firefox, and Safari):
+        </p>
+        <ul>
+          <li>
+            Header border-radius clipping:
+            <ul>
+              <li>
+                Chrome: Stays clipped on the top but does not get clipped on the
+                bottom edges.
+              </li>
+              <li>
+                Firefox: Clipping updates late or only upon interaction (e.g.,
+                clicking in the content).
+              </li>
+              <li>Safari: Works as expected.</li>
+              <li>
+                Note: Scrolling back to the top sometimes fails to properly clip
+                the header.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>backdrop-filter: blur()</code> on the header:
+            <ul>
+              <li>
+                Chrome & Firefox: Delays in updating the clipped border-radius
+                (personal feeling).
+              </li>
+              <li>
+                Firefox: Does not work (<a
+                  href="https://stackoverflow.com/questions/74277643/firefox-backdrop-filter-blur-not-working-with-sticky-positioning/76434579#76434579"
+                  title="Findings from an answer on Stack Overflow"
+                  target="_blank"
+                  >check this bug</a
+                >) - removing the <code>border-radius</code> or
+                <code>overflow</code> property of the header's parent element
+                would fix the issue.
+              </li>
+              <li>Safari: Works as expected.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          <strong>Note</strong>: At first, I thought that Chrome also just had a
+          delay in updating the clipped border-radius, but I think that some
+          animations that were present on my live page were causing style
+          recalculations or/and repaints and that's why the clipping was
+          sometimes updated in the right moment. Resizing the browser window
+          also updates the "clipping".
+        </p>
+        <p>
+          Adding <code>will-change</code> with the values
+          <code>scroll-position</code> or <code>transform</code> to the header
+          didn't fix the issues. I tried using a pseudo-element
+          (<code>header::before</code>) to create the blurred background, hoping
+          it would fix the blur problem in Firefox, but it also didn't work.
+        </p>
+        <p>
+          Now, I'm not sure if all of the described issues are rendering bugs of
+          the mentioned browsers or if my CSS setup is not valid/covered by the
+          spec. I've never had such a specific rendering-related problem before,
+          so I don't know what other solutions might be considered.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

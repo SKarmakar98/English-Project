@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inhouse English</title>
+    <title>My Page Title</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon3.ico" />
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="../CSS/SelectClass.css" />
+  </head>
+  <body>
+    <div data-test="container" class="container-fluid dark_blue_before p-0">
+      <div class="body-NDX C_Login_H">
+        <div class="row">
+          <div
+            class="w-skill w-skill-bg d-flex flex-column align-items-center justify-content-end"
+          ></div>
+          <div class="col-lg-6 col-sm-14"></div>
+          <div class="col-lg-6 col-sm-12 dark_blue_before">
+            <div class="col-md-8 col-sm-12 mx-auto">
+              <div class="Select_textBK">
+                <div class="item SelectBox">
+                  <h1 class="Twhite mt-3 pt-4 p-0 m-0">Select Subject</h1>
+                  <form class="Twhite pt-4 m-0">
+                    <div
+                      class="mx-auto d-flex flex-column d-flex align-items-center justify-content-center scroll"
+                    >
+                      <!-- <p class="mb-1 tr_cls tr_cls_11" data-disabled="false">
+                        <input
+                          type="radio"
+                          name="radio"
+                          id="radio_2211"
+                          class="radio"
+                          style="display: none"
+                        /><label for="radio_2211">Class 11</label>
+                      </p> -->
+                      <span class="mb-1 tr_cls tr_cls_12" data-disabled="false">
+                        <div class="subject" onclick="showDiv()">English</div>
+                      </span>
+                      <div
+                        id="animatedDiv"
+                        class="hidden"
+                        style="display: none"
+                      >
+                        <span class="mb-1 tr_cls tr_cls_12">
+                          <a href="#" target="_blank" rel="noopener noreferrer">
+                            Sem 1
+                          </a></span
+                        >
+                        <span class="mb-1 tr_cls tr_cls_12">
+                          <a href="#" target="_blank" rel="noopener noreferrer">
+                            Sem 2
+                          </a></span
+                        >
+                      </div>
+
+                      <span class="mb-1 tr_cls tr_cls_12">
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          Smart English
+                        </a></span
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="yellow-patch-2_1" hidden=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showDiv() {
+        var x = document.querySelector(".hidden");
+        // div.classList.add("visible");
+        if (x.style.display === "none") {
+          x.style.display = "flex";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+  <script src="../JS/bootstrap.bundle.min.js"></script>
+</html>

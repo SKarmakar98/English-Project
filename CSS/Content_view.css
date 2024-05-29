@@ -1,0 +1,128 @@
+.spx.c {
+  padding-top: 1rem;
+  width: 9%;
+  background-color: #ecbf4a;
+  box-shadow: -2px 0 9px 3px #b9b9b9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.spx.c .tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0.5rem 0 0.3rem;
+  border: 0;
+  border-radius: 7px;
+  width: 100%;
+  min-height: 80px;
+  position: relative;
+  transition: all 0.8s ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.spx.c span.wrap {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+.spx.c .tab_learn .logo {
+  background-image: url(../Images/Content_View/Learn.png);
+}
+.spx.c .tab .logo {
+  width: 70px;
+  height: 65px;
+  background-repeat: no-repeat;
+  background-size: 78%;
+  background-position: 50%;
+}
+.spx.c .tab_activity .logo {
+  background-image: url(../Images/Content_View/Act.png);
+}
+.spx.c .tab.active::after {
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.spx.c .tab::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.spx.c .tab:hover {
+  background-color: #3d6ebd;
+  transition: all 0.4s ease;
+}
+.top {
+  width: 100vw;
+  height: 12vh;
+  margin-bottom: 2%;
+  background-color: #ecbf4a;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  border-radius: 0px 0px 9px 9px;
+}
+.bottom {
+  width: 100vw;
+  /* background-color: #ecbe4a43; */
+  background-color: rgba(101, 95, 95, 0.141);
+  text-align: center;
+  width: 100vw;
+  height: 80vh;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  border-radius: 9px;
+}
+.video-player {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  margin: 10px;
+  height: 50vh;
+  background-color: #3d6ebd;
+  text-align: center;
+}
+.video-list {
+  margin: 10px;
+  height: 18vh;
+  background-color: #eff4df;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.video-list:hover {
+}
+.video-icon {
+  /* background-color: gainsboro; */
+  font-size: 5rem;
+  /* color: aliceblue; */
+  padding: 15px;
+  display: flex;
+}
+.video-icon:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 15px;
+}
+.scroll {
+  overflow-x: scroll;
+  /* -webkit-mask: linear-gradient(to bottom,rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 50px,rgb(0, 0, 0) calc(100% - 50px),rgba(0, 0, 0, 0) 100% ); */
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #121111;
+}
+/* ********************* */
