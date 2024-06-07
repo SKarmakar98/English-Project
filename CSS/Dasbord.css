@@ -24,7 +24,25 @@
 }
 /* ******************* */
 .user-details {
-  background-color: aqua;
+  background-color: #ffea32;
+  height: 10rem;
+}
+.user-icon {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin-left: 4rem;
+  background-color: black;
+}
+.user-name {
+  float: left;
+}
+
+.Left-logo {
+  height: 8rem;
+  width: 11rem;
+  float: right;
+  margin: 0px 10px 0px 0px;
 }
 
 .col3 {
