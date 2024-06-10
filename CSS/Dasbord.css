@@ -46,7 +46,7 @@
 }
 /* ************************** */
 .menubar {
-  display: none!important;
+  /* display: none!important; */
   height: 20rem;
   width: 13rem;
   margin-top: -3rem;
@@ -93,9 +93,15 @@
   width: 40px;
 }
 /* **************** */
+.left-main-div {
+  background-color: aqua;
+  height: 20rem;
+  width: 83.32%;
+  margin-left: 10px;
+}
 .section {
   height: 2rem;
-  width: 70%;
+  width: 90%;
   background-color: #0000;
   color: white;
 }
@@ -114,9 +120,3 @@
   background-color: aqua;
 
 } */
-.row2 {
-  background-color: aqua;
-  height: 20rem;
-  width: 70%;
-  margin-left: 10px;
-}
