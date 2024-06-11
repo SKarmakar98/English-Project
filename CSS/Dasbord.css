@@ -143,7 +143,8 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .card-first{
-  background-color: #11389e;
+  background-color: #10255e;
+  /* background-color: #11389e; */
   border-radius: 3px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   gap: 4;
