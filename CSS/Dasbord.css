@@ -46,7 +46,7 @@
 }
 /* ************************** */
 .menubar {
-  display: none !important;
+  /* display: none !important; */
   height: 20rem;
   width: 13rem;
   margin-top: -3rem;
@@ -142,13 +142,17 @@
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-.card-first{
+.card-first {
   background-color: #10255e;
   /* background-color: #11389e; */
   border-radius: 3px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   gap: 4;
 }
-.attempt{
+.attempt {
   background-color: rgb(0 0 0);
+}
+.checked {
+  color: orange;
 }
