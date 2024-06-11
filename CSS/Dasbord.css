@@ -47,13 +47,13 @@
 /* ************************** */
 .menubar {
   /* display: none !important; */
-  height: 20rem;
+  /* height: 20rem; */
   width: 13rem;
   margin-top: -3rem;
   margin-left: 7px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  height: 73vh !important;
+  height: 100vh !important;
   background-color: white !important;
   border-radius: 5px;
   padding: 7px;
