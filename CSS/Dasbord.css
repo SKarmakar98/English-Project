@@ -54,7 +54,7 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   height: 100vh !important;
-  background-color: white !important;
+  background-color: white;
   border-radius: 5px;
   padding: 7px;
 }
@@ -166,4 +166,18 @@
 }
 .shadow-mid {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/* ******************** */
+@media screen and (max-width: 1300px) {
+  .display-hide {
+    /* text-align: center; */
+    background-color: green;
+    display: none;
+  }
+.menubar {
+  width: 3rem;
+}
+.menu{
+display: none;
+}
 }
