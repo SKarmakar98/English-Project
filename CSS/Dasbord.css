@@ -48,6 +48,8 @@
 .menubar {
   /* display: none !important; */
   /* height: 20rem; */
+  position: absolute;
+  z-index: 1;
   width: 13rem;
   margin-top: -3rem;
   margin-left: 7px;
@@ -95,8 +97,8 @@
 /* **************** */
 .left-main-div {
   height: 20rem;
-  width: 83.32%;
-  margin-left: 10px;
+  width: 100%;
+  /* margin-left: 10px; */
 }
 .section {
   /* height: 2.6rem; */
@@ -169,15 +171,4 @@
 }
 /* ******************** */
 @media screen and (max-width: 1300px) {
-  .display-hide {
-    /* text-align: center; */
-    background-color: green;
-    display: none;
-  }
-.menubar {
-  width: 3rem;
-}
-.menu{
-display: none;
-}
 }
